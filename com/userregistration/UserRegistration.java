@@ -15,6 +15,7 @@ public class UserRegistration {
 		validationProcess.lastName();
 		validationProcess.email();
 		validationProcess.mobileNumber();
+		validationProcess.password();
 	}
 	
 	public void firstName() {
@@ -85,4 +86,20 @@ public class UserRegistration {
 		System.out.println("---------------------------------");
 	}
 	
+public void password() {
+		
+		while (loop == 0) {
+			System.out.println("\nEnter your valid password with minimum 8 character");
+			String password = scanner.nextLine();
+			String passwordPattern = "^[A-Za-z0-9]{8}$";
+			
+			if (password.matches(passwordPattern)) {
+				System.out.println("password is valid");
+				break;	
+			}
+			else 
+				System.out.println("password is invalid"); 
+		}	
+		System.out.println("---------------------------------");
+	}
 }
