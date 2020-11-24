@@ -10,10 +10,11 @@ public class UserRegistration {
 	
 	public static void main(String[] args) {
 		System.out.println("********* Welcome to User Registration process **********");
-		
-		validationProcess.firstName();
+			
+		validationProcess.firstName(); 
 		validationProcess.lastName();
 		validationProcess.email();
+		validationProcess.mobileNumber();
 	}
 	
 	public void firstName() {
@@ -63,6 +64,23 @@ public class UserRegistration {
 			}
 			else 
 				System.out.println("email is invalid"); 
+		}	
+		System.out.println("---------------------------------");
+	}
+	
+	public void mobileNumber() {
+		
+		while (loop == 0) {
+			System.out.println("\nEnter your valid mobile number with country code");
+			String mobileNumber = scanner.nextLine();
+			String mobileNumberPattern = "^([0-9]{2})[ ]([1-9]{1}[0-9]{9})$";
+			
+			if (mobileNumber.matches(mobileNumberPattern)) {
+				System.out.println("mobile number is valid");
+				break;	
+			}
+			else 
+				System.out.println("mobile number is invalid"); 
 		}	
 		System.out.println("---------------------------------");
 	}
