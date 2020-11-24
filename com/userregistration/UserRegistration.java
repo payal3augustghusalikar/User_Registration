@@ -58,7 +58,9 @@ public class UserRegistration {
 		while (loop == 0) {
 			System.out.println("\nEnter your valid email");
 			String email = scanner.nextLine();
-			String emailPattern = "^([a-z]{3,})([.]{0,1}[a-z]*)@([a-z]{2}).([a-z]{2})([.]{1}[a-z]{2}){0,1}$";
+		//	String emailPattern = "^([a-z]{3,})([.]{0,1}[a-z]*)@([a-z]{2}).([a-z]{2})([.]{1}[a-z]{2}){0,1}$";
+			String emailPattern = "^([a-z]{3,})([\'.\'-\'+]{0,1}[a-z0-9]*)@([a-z]{1,4}).([a-z]{2,3})(^[.]{0,1}[a-z]{2,3}{0,1})$";
+		//	String emailPattern = "^([a-z]+)([a-z0-9-.\'+]*[.]{0,1}[a-z0-9]+)@([a-z]{3,4}).([a-z]{0,3})([.]{0,1}([a-z]{2}){0,1}$";
 			
 			if (email.matches(emailPattern)) {
 				System.out.println("email is valid");
