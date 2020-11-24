@@ -91,7 +91,7 @@ public void password() {
 		while (loop == 0) {
 			System.out.println("\nEnter your valid password with minimum 8 character");
 			String password = scanner.nextLine();
-			String passwordPattern = "^[A-Za-z0-9]{8}$";
+			String passwordPattern = "^([A-Z]{1}[A-Za-z0-9]{7,})$";
 			
 			if (password.matches(passwordPattern)) {
 				System.out.println("password is valid");
