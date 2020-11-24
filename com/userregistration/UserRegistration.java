@@ -11,9 +11,10 @@ public class UserRegistration {
 	public static void main(String[] args) {
 		System.out.println("********* Welcome to User Registration process **********");
 			
+		
 		validationProcess.firstName(); 
 		validationProcess.lastName();
-		validationProcess.email();
+		validationProcess.email(); 
 		validationProcess.mobileNumber();
 		validationProcess.password();
 	}
@@ -92,7 +93,7 @@ public void password() {
 			System.out.println("\nEnter your valid password with minimum 8 character");
 			String password = scanner.nextLine();
 
-			String passwordPattern = "^([A-Z]?[0-9]?[A-Za-z0-9]{6})$";
+			String passwordPattern = "^([A-Z]?[A-Za-z0-9]*[0-9]+[A-Za-z0-9]*[~!@#$%^&*]?[A-Za-z0-9]{5,})$";
 
 			if (password.matches(passwordPattern)) {
 				System.out.println("password is valid");
