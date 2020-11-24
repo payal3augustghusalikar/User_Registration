@@ -13,6 +13,7 @@ public class UserRegistration {
 		
 		validationProcess.firstName();
 		validationProcess.lastName();
+		validationProcess.email();
 	}
 	
 	public void firstName() {
@@ -48,5 +49,22 @@ public class UserRegistration {
 		}
 		System.out.println("---------------------------------");
 	}	
+	
+	public void email() {
+		
+		while (loop == 0) {
+			System.out.println("\nEnter your valid email");
+			String email = scanner.nextLine();
+			String emailPattern = "^([a-z]{3,})([.]{0,1}[a-z]*)@([a-z]{2}).([a-z]{2})([.]{1}[a-z]{2}){0,1}$";
+			
+			if (email.matches(emailPattern)) {
+				System.out.println("email is valid");
+				break;	
+			}
+			else 
+				System.out.println("email is invalid"); 
+		}	
+		System.out.println("---------------------------------");
+	}
 	
 }
